@@ -1,0 +1,6 @@
+{
+  "free-shipping-thermometer":{
+    "component":"ShippingThermometer",
+    "render":"client"
+  }
+}
