@@ -1,0 +1,65 @@
+.progressContainer{
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 40px;
+  width: 300px;
+  border-radius: 50px;
+  background: white;
+  overflow: hidden;
+  margin: 0 auto;
+}
+.progressbar{
+  position: relative;
+  border: 2px solid gray;
+  width: calc(100% - 35px);
+  height: 20px;
+  overflow: hidden;
+  border-radius: 10px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0px;
+  z-index: 1;
+  background: white;
+  border-right: none;
+}
+
+.progressbarFill{
+  /* position: absolute; */
+  height: 20px;
+  width: 250px;
+  background: #ff50f6;
+  border-radius: 10px;
+  transition: width 100ms ease-out;
+}
+.icon{
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  width: 40px;
+  background: white;
+  border-radius: 50%;
+  right: 0;
+  border: 2px solid gray;
+  transition: width 100ms ease-out;
+}
+.iconActive{
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  width: 40px;
+  border: 2px solid gray;
+  background: #ff50f6;
+  border-radius: 50%;
+  right: 0;
+  transition: width 200ms ease-out;
+}
+.icon svg{
+  color:gray
+}
+.iconActive{
+  color:white
+}
