@@ -14,10 +14,7 @@ const Termomether = ({width}:Props) => {
         <div className={styles.progressbar}>
           <div
             className={styles.progressbarFill}
-            style={{
-              width: `${width}%`,
-              backgroundColor: "#ff50f6"
-            }}
+            style={{width: `${width}%`}}
             />
         </div>
         <div
