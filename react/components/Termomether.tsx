@@ -8,8 +8,6 @@ type Props = {
 
 const Termomether = ({width}:Props) => {
 
-
-
   return (
     <div>
       <div className={styles.progressContainer}>
