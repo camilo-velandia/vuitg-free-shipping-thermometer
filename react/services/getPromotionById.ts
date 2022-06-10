@@ -8,7 +8,6 @@ export default async function getPromotionsById(id:string) {
     }
     // waits until the request completes...
     const json = await response.json();
-    console.log('API',url)
     return json;
 
   } catch (error) {

@@ -3,10 +3,15 @@ import { useOrderForm } from 'vtex.order-manager/OrderForm'
 import Termomether from './Termomether'
 import getPromotions from '../services/getPromotions'
 import getPromotionById from '../services/getPromotionById'
+import PropTypes from 'prop-types'
 
-const ShippingThermometer = () => {
+type Props = {
+  promoName: string
+}
+
+const ShippingThermometer = ({promoName}:Props) => {
+
   const {orderForm} = useOrderForm()
-  const promoName= 'Promo Envio Gratis'
   const orderValue= orderForm?.totalizers[0]?.value/100
   const [isFree, setIsFree] = useState(false)
   const [shippingValueFree, setShippingValueFree] = useState(0)
@@ -40,5 +45,25 @@ const ShippingThermometer = () => {
     </div>
   );
 };
+
+ShippingThermometer.propTypes = {
+  promoName: PropTypes.string.isRequired
+}
+
+ShippingThermometer.defaultProps = {
+  promoName: 'Promo Envio Gratis'
+}
+
+ShippingThermometer.schema = {
+  title: 'Free shipping thermometer',
+  type: 'object',
+  properties: {
+    promoName: {
+      title: 'Promotion Name',
+      description: 'Add the promotion name used by the app to get the floor price',
+      type: 'string',
+    },
+  },
+}
 
 export default ShippingThermometer;
